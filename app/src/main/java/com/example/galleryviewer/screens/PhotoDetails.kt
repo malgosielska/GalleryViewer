@@ -3,15 +3,19 @@ package com.example.galleryviewer.screens
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -30,7 +34,10 @@ fun DisplayPhotoScreen(viewModel: PhotosViewModel) {
     val selectedPhoto = viewModel.selectedPhoto.value
 
     Column(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         if (selectedPhoto != null) {
             MyAppTopBar("Photo details")
@@ -39,8 +46,9 @@ fun DisplayPhotoScreen(viewModel: PhotosViewModel) {
             Text(
                 text = "Data",
                 style = TextStyle(
-                    fontSize = 15.sp,
+                    fontSize = 15.sp
                 ),
+                textAlign = TextAlign.Justify,
                 modifier = Modifier.padding(horizontal = 10.dp)
             )
             Divider(
@@ -77,7 +85,7 @@ fun PrintDescription(selectedPhotoItem: Photo) {
     )
     LazyColumn(
         contentPadding = PaddingValues(bottom = 70.dp),
-        modifier = Modifier.height(350.dp)
+        modifier = Modifier.height(250.dp)
     ) {
 
         items(descriptionItems) { (label, text) ->
