@@ -39,6 +39,6 @@ object WebClient {
 interface ApiService {
     // Either add the api key to a file that is not being tracked with your version control system,
     // or add a gradle script to add it as a string resource (per Google's recommendation)
-    @GET("?method=flickr.photos.getRecent&format=json&nojsoncallback=1&api_key=${ApiConstants.FLICKR_API_KEY}")
+    @GET("?method=flickr.interestingness.getList&api_key=${ApiConstants.FLICKR_API_KEY}&per_page=500&format=json&nojsoncallback=1&extras=date_taken,owner_name,tags,views")
     suspend fun fetchImages(): PhotosSearchResponse
 }
