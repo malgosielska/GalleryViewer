@@ -1,5 +1,5 @@
-import com.example.galleryviewer.ApiConstants
-import com.example.galleryviewer.data.PhotosSearchResponse
+import com.example.galleryviewer.api_connection.ApiConstants
+import com.example.galleryviewer.api_connection.PhotosSearchResponse
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient

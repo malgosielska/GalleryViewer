@@ -66,8 +66,16 @@ dependencies {
     implementation("io.coil-kt:coil-compose:2.5.0")
     implementation("androidx.navigation:navigation-compose:2.7.5")
     implementation ("com.github.skydoves:landscapist-glide:1.6.1")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2")
+
 
     testImplementation("junit:junit:4.13.2")
+    testImplementation ("io.mockk:mockk:1.12.0")
+    androidTestImplementation ("io.mockk:mockk-android:1.12.0") // Jeśli korzystasz z testów Androida
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.0")
+    testImplementation("org.mockito:mockito-core:3.11.2")
+
+
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))

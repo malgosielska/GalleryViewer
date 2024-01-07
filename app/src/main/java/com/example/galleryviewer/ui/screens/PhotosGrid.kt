@@ -1,4 +1,4 @@
-package com.example.galleryviewer.screens
+package com.example.galleryviewer.ui.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable

@@ -5,8 +5,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.galleryviewer.screens.DisplayPhotoScreen
-import com.example.galleryviewer.screens.MainScreen
+import com.example.galleryviewer.ui.screens.DisplayPhotoScreen
+import com.example.galleryviewer.ui.screens.MainScreen
 
 
 const val MAIN_SCREEN_ROUTE = "main_screen"
