@@ -1,4 +1,4 @@
-package com.example.galleryviewer.screens
+package com.example.galleryviewer.ui.screens
 
 
 import androidx.compose.foundation.layout.padding

@@ -1,4 +1,4 @@
-package com.example.galleryviewer.data
+package com.example.galleryviewer.api_connection
 
 // The outermost wrapper for the api response
 data class PhotosSearchResponse(
